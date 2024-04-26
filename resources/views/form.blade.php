@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Submit Form</title>
-</head>
-<body>
+@extends('layouts.app')
+
+@section('content')
 
     @if(session('formData'))
         <script>
@@ -17,7 +14,6 @@
         </div>
     @endif
 
-    <h1>Fill the Form</h1>
     <form action="{{ route('form.submit') }}" method="POST">
         @csrf <!-- CSRF Token for security -->
         <label for="name">Name:</label>
@@ -36,5 +32,5 @@
 
         <button type="submit">Submit</button>
     </form>
-</body>
-</html>
+
+@endsection

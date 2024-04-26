@@ -5,7 +5,7 @@ use App\Http\Controllers\FormController;
 
 // Home page route
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 // Another page route
